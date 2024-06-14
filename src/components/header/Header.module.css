@@ -38,12 +38,12 @@
     margin-right: 20px;
 }
 
-.nav a {
+.nav .a {
     text-decoration: none;
     color: hsl(0, 0%, 100%);
 }
 
-.nav .active a:hover {
+.nav .active .a:hover {
     color: hsl(0, 0%, 60%);
     text-decoration: underline;
 }
