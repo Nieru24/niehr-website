@@ -1,0 +1,132 @@
+.calculator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    color: white;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    background-color: transparent;
+    background-image: linear-gradient(
+        120deg,
+        rgba(46, 35, 37,0.3),
+        rgba(159, 117, 107,0.6)
+    );
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 20px;
+    overflow: hidden; /* Hide overflow within this component */
+}
+
+
+/* Main data container */
+.data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.data h1 {
+    font-size: 1rem;
+    text-align: center;
+    margin: 0;
+}
+
+.data .divContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+/* Left container */
+.data .div1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+  
+.data .div1 input {
+    width: 120px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+  
+.data .div1 button {
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: #9F756B;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+.data .div1 button:hover {
+    background-color: #80594D;
+}
+  
+/* Center container */
+.data .div2 {
+    flex: 1;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    border-radius: 3px;
+    width: 500px;
+    height: 100px;
+}
+  
+
+  
+/* Right container */
+.data .div3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+  
+.data .div3 button {
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: #9F756B;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+.data .div3 button:hover {
+    background-color: #80594D;
+}
+
+
+.ungroupedCalculation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    border-radius: 5px;
+}
+
+.ungroupedCalculation h1 {
+    font-size: 1rem;
+    text-align: center;
+    margin: 0;
+}

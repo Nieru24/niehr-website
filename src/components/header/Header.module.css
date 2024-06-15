@@ -1,15 +1,14 @@
 .header {
     background-color: #9F756B;
-    background-position: top;
-    color: hsl(0, 0%, 100%);
-    width: 100%;
+    color: #fff;
+    width: calc(100% - 15px);
     text-align: center;
     text-transform: uppercase;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
+    border-top-left-radius: 5px;
     font-family: Roboto, sans-serif;
     position: fixed;
     top: 0;
+    z-index: 1000; /* Ensure it stays on top */
 }
 
 .nav {
