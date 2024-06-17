@@ -5,7 +5,7 @@ import Header from '../components/header/Header'
 import WebsiteBackground from '../components/WebsiteBackground'
 
 
-function statisticCalculator() {
+function StatisticCalculator() {
 
   const [myArray, setMyArray] = useState([]);
   const [previousArray, setPreviousArray] = useState([0]);
@@ -149,7 +149,7 @@ function statisticCalculator() {
             </div>
 
             <div className={classes.settings}>
-              <h1 className={classes.name}>Settings</h1>
+              <h1 className={classes.name}>Settings (In work)</h1>
               <div className={classes.labelsContainer}>
 
                 <label className={classes.settingRbtn}>
@@ -182,14 +182,41 @@ function statisticCalculator() {
             </div>
 
             <div className={classes.groupedCalculation}>
-              <h1 className={classes.name}>Grouped Data Calculation</h1>
+              <h1 className={classes.name}>Grouped Data Calculation (In work)</h1>
               <div className={classes.labelsContainer}>
-                <div className={classes.label}>Mean: </div>
-                <div className={classes.label}>Median: </div>
-                <div className={classes.label}>Mode: </div>
+                <div className={classes.label}>Mean: {range(myArray)}</div>
+                <div className={classes.label}>Median: {range(myArray)}</div>
+                <div className={classes.label}>Mode: {range(myArray)}</div>
               </div>
             </div>
 
+            <div className={classes.percentiles}>
+              <h1>Percentiles (In work)</h1>
+              
+              <div className={classes.labelsContainer}>
+                <div className={classes.input}>i = 
+                  <input 
+                    type="number" 
+                    onChange="" 
+                    min="1" 
+                    max="100"
+                    placeholder="Enter a number" 
+                  />
+                </div>
+                <div className={classes.label}>Percentiles = {range(myArray)}</div>
+              </div>
+            </div>
+
+          </div>
+
+          <div className={classes.tableContainer}>
+            <div className={classes.table}>Class Interval</div>
+            <div className={classes.table}>Class Boundaries</div>
+            <div className={classes.table}>Class Marks</div>
+            <div className={classes.table}>Frequency</div>
+            <div className={classes.table}>Cumulative Frequency</div>
+            <div className={classes.table}>Cumulative Percent Frequency</div>
+            <div className={classes.table}>Relative Frequency</div>
           </div>
 
         </div> 
@@ -199,4 +226,4 @@ function statisticCalculator() {
   )
 }
 
-export default statisticCalculator
+export default StatisticCalculator

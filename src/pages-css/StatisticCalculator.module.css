@@ -16,6 +16,7 @@
     border: 1px solid rgba(209, 213, 219, 0.3);
     margin-left: 20px;
     margin-right: 20px;
+    margin-bottom: 20px;
     padding: 20px;
     overflow: hidden; /* Hide overflow within this component */
 }
@@ -190,15 +191,20 @@
     text-align: center;
     margin: 0;
     margin-bottom: 10px;
+    display: flex;
 }
 
 .row2 .labelsContainer{
     border: 1px solid rgba(209, 213, 219, 0.3);
     width: 300px;
+    min-height: 180px;
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 10px;
     font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 
@@ -206,24 +212,29 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    
     padding: 20px;
     border: 1px solid rgba(209, 213, 219, 0.3);
     border-radius: 5px;
-    width: 350px;
+    width: 330px;
+    min-height: 200px;
     margin: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .settings{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     padding: 20px;
     border: 1px solid rgba(209, 213, 219, 0.3);
     border-radius: 5px;
-    width: 350px;
+    width: 330px;
+    min-height: 200px;
     margin: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .settings .labelsContainer{
@@ -291,11 +302,75 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: 20px;
     border: 1px solid rgba(209, 213, 219, 0.3);
     border-radius: 5px;
-    width: 350px;
+    min-width: 250px;
+    min-height: 200px;
     margin: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
+.groupedCalculation .labelsContainer{
+    width: 220px;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.percentiles{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    border-radius: 5px;
+    min-width: 250px;
+    min-height: 200px;
+    margin: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.percentiles div{
+    font-size: 0.8rem;
+}
+
+.percentiles .labelsContainer{
+    width: 220px;
+    min-height: 180px;
+}
+
+.percentiles .input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.percentiles input{
+    margin-left: 5px;
+    width: 120px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+.tableContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    border-radius: 5px;
+    min-width: 95%;
+    min-height: 200px;
+    margin: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
