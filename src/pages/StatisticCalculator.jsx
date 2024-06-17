@@ -210,13 +210,13 @@ function StatisticCalculator() {
           </div>
 
           <div className={classes.tableContainer}>
-            <div className={classes.table}>Class Interval</div>
-            <div className={classes.table}>Class Boundaries</div>
-            <div className={classes.table}>Class Marks</div>
-            <div className={classes.table}>Frequency</div>
-            <div className={classes.table}>Cumulative Frequency</div>
-            <div className={classes.table}>Cumulative Percent Frequency</div>
-            <div className={classes.table}>Relative Frequency</div>
+            <div className={classes.table}><h1>Class Interval</h1></div>
+            <div className={classes.table}><h1>Class Boundaries</h1></div>
+            <div className={classes.table}><h1>Class Marks</h1></div>
+            <div className={classes.table}><h1>Frequency</h1></div>
+            <div className={classes.table}><h1>Cumulative Frequency</h1></div>
+            <div className={classes.table}><h1>Cumulative Percent Frequency</h1></div>
+            <div className={classes.table}><h1>Relative Frequency</h1></div>
           </div>
 
         </div> 

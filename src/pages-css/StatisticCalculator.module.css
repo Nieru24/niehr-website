@@ -362,15 +362,32 @@
 
 .tableContainer{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     padding: 20px;
     border: 1px solid rgba(209, 213, 219, 0.3);
     border-radius: 5px;
     min-width: 95%;
     min-height: 200px;
-    margin: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
+}
+
+
+.table{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 20px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    border-radius: 5px;
+    min-height: 500px;
+    width: 170px;
+    margin: 10px;
+}
+
+.table h1{
+    font-size: 1rem;
+    text-align: center;
+    flex-basis: 100%;
 }
