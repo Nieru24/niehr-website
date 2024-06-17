@@ -58,6 +58,43 @@ function statisticCalculator() {
     setMyArray(sampleData);
   };
 
+
+  const range = (array) => {
+    const sortedArray = formatArray(array);
+    return sortedArray[sortedArray.length - 1] - sortedArray[0];
+  };
+
+  const mean = (array) => {
+    const total = array.reduce((acc, curr) => acc + curr, 0);
+    return (total / array.length).toFixed(2);
+  };
+
+  const median = (array) => {
+    const sortedArray = formatArray(array);
+    const mid = Math.floor(sortedArray.length / 2);
+    return sortedArray.length % 2 !== 0 ? sortedArray[mid] : ((sortedArray[mid - 1] + sortedArray[mid]) / 2).toFixed(2);
+  };
+
+  const mode = (array) => {
+    const frequency = {};
+    let maxFreq = 0;
+    let modes = [];
+
+    array.forEach(value => {
+      frequency[value] = (frequency[value] || 0) + 1;
+      if (frequency[value] > maxFreq) {
+        maxFreq = frequency[value];
+        modes = [value];
+      } else if (frequency[value] === maxFreq) {
+        modes.push(value);
+      }
+    });
+
+    return modes.length === array.length ? 'No mode' : modes.join(', ');
+  };
+
+  const sampleSize = (array) => array.length;
+
   return (
     <>
       <WebsiteBackground/>
@@ -67,7 +104,7 @@ function statisticCalculator() {
           
           <div className={classes.data}>
 
-            <h1 className={classes.name}>Data</h1>
+            <h1 className={classes.name}>Data Set</h1>
 
             <div className={classes.divContainer}>
               <div className={classes.div1}>
@@ -96,17 +133,63 @@ function statisticCalculator() {
 
           </div>
 
-          <div className={classes.ungroupedCalculation}>
-            
-            <h1 className={classes.name}>Ungrouped Data Calculation</h1>
-            
-            <div className={classes.labelsContainer}>
-              <div className={classes.label}>Range:</div>
-              <div className={classes.label}>Mean:</div>
-              <div className={classes.label}>Median:</div>
-              <div className={classes.label}>Mode:</div>
-              <div className={classes.label}>Sample Size (n):</div>
+          <div className={classes.row2}>
+
+            <div className={classes.ungroupedCalculation}>
+              
+              <h1 className={classes.name}>Ungrouped Data Calculation</h1>
+              
+              <div className={classes.labelsContainer}>
+                <div className={classes.label}>Range: {range(myArray)}</div>
+                <div className={classes.label}>Mean: {mean(myArray)}</div>
+                <div className={classes.label}>Median: {median(myArray)}</div>
+                <div className={classes.label}>Mode: {mode(myArray)}</div>
+                <div className={classes.label}>Sample Size (n): {sampleSize(myArray)}</div>
+              </div>
             </div>
+
+            <div className={classes.settings}>
+              <h1 className={classes.name}>Settings</h1>
+              <div className={classes.labelsContainer}>
+
+                <label className={classes.settingRbtn}>
+                  <div>
+                    <input type="radio" name="setting" id="setting-1" />
+                    <span className={classes.settingLabel}>Number of Classes</span>
+                  </div>
+                  <input 
+                    type="number" 
+                    onChange="" 
+                    min="1" 
+                    placeholder="Enter a number" 
+                  />
+                </label>
+
+                <label className={classes.settingRbtn}>
+                  <div>
+                    <input type="radio" name="setting" id="setting-2" />
+                    <span className={classes.settingLabel}>Class Interval</span>
+                  </div>
+                  <input 
+                    type="number" 
+                    onChange="" 
+                    min="1" 
+                    placeholder="Enter a number" 
+                  />
+                </label>
+
+              </div>
+            </div>
+
+            <div className={classes.groupedCalculation}>
+              <h1 className={classes.name}>Grouped Data Calculation</h1>
+              <div className={classes.labelsContainer}>
+                <div className={classes.label}>Mean: </div>
+                <div className={classes.label}>Median: </div>
+                <div className={classes.label}>Mode: </div>
+              </div>
+            </div>
+
           </div>
 
         </div> 

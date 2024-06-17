@@ -1,7 +1,6 @@
-.calculator {
+.calculator{
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
     min-height: 100vh;
     color: white;
@@ -23,7 +22,7 @@
 
 
 /* Main data container */
-.data {
+.data{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,9 +31,10 @@
     border: 1px solid rgba(209, 213, 219, 0.3);
     border-radius: 5px;
     margin-bottom: 20px;
+    width: 900px;
 }
 
-.data h1 {
+.data h1{
     font-size: 1rem;
     text-align: center;
     margin: 0;
@@ -43,18 +43,25 @@
 .data .divContainer{
     display: flex;
     flex-direction: row;
+    align-items: center;
+}
+
+.data .labelsContainer{
+    font-size: 0.8rem;
 }
 
 /* Left container */
-.data .div1 {
+.data .div1{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 10px;
+    width: 150px;
+    height: 150px;
 }
   
-.data .div1 input {
+.data .div1 input{
     width: 120px;
     padding: 10px;
     margin-bottom: 10px;
@@ -62,7 +69,7 @@
     border-radius: 5px;
 }
   
-.data .div1 button {
+.data .div1 button{
     padding: 10px 20px;
     margin-bottom: 10px;
     border: none;
@@ -73,12 +80,12 @@
     transition: background-color 0.3s ease;
 }
   
-.data .div1 button:hover {
+.data .div1 button:hover{
     background-color: #80594D;
 }
   
 /* Center container */
-.data .div2 {
+.data .div2{
     flex: 1;
     padding: 20px;
     margin: 10px;
@@ -86,20 +93,23 @@
     border-radius: 3px;
     width: 500px;
     height: 100px;
+    min-height: 100px;
 }
   
 
   
 /* Right container */
-.data .div3 {
+.data .div3{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 10px;
+    width: 150px;
+    height: 150px;
 }
   
-.data .div3 button {
+.data .div3 button{
     padding: 10px 20px;
     margin-bottom: 10px;
     border: none;
@@ -110,12 +120,89 @@
     transition: background-color 0.3s ease;
 }
   
-.data .div3 button:hover {
+.data .div3 button:hover{
     background-color: #80594D;
 }
 
+@media (max-width: 1020px){
+    .data .divContainer{
+        width: 100vh;
+        flex-direction: column;
+    }
 
-.ungroupedCalculation {
+    .data{
+        width: auto; /* Adjust the width for smaller screens */
+    }
+
+    .data .div1,
+    .data .div2,
+    .data .div3{
+        width: 650px; /* Make divs take full width */
+        height: auto; /* Adjust the height for better fit */
+        margin: 10px 0; /* Adjust margin for spacing */
+    }
+
+    .data .div1{
+        flex-direction: row;
+    }
+    .data .div1 input{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .data .div1 button{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .data .div2{
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .data .div3{
+        flex-direction: row;
+    }
+    .data .div3 button{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+
+@media (max-width: 550px) {
+    .data{
+        max-width: 350px;
+    }
+    .data .div2{
+        width: 300px;
+    }
+}
+
+
+.row2{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.row2 h1{
+    font-size: 1rem;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.row2 .labelsContainer{
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    width: 300px;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 0.8rem;
+}
+
+
+.ungroupedCalculation{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -123,20 +210,92 @@
     padding: 20px;
     border: 1px solid rgba(209, 213, 219, 0.3);
     border-radius: 5px;
+    width: 350px;
+    margin: 20px;
+}
+
+.settings{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    border-radius: 5px;
+    width: 350px;
+    margin: 20px;
+}
+
+.settings .labelsContainer{
     width: 300px;
 }
 
-.ungroupedCalculation h1 {
-    font-size: 1rem;
-    text-align: center;
-    margin: 0;
+.settings .settingRbtn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 10px;
+    margin-top: 10px;
 }
 
-.ungroupedCalculation .labelsContainer{
-    border: 1px solid rgba(209, 213, 219, 0.3);
-    width: 250px;
-    border-radius: 5px;
+.settings .labelsContainer input[type="number"]{
+    width: 120px;
     padding: 10px;
-    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
+
+.settings .settingRbtn input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #9F756B;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.settings .labelsContainer input[type="radio"]:checked{
+    background-color: #4D3F47;
+}
+
+.settings .settingRbtn label{
+    display: flex;
+    align-items: center;
+}
+
+.settings .settingRbtn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.settings .settingRbtn div{
+    display: flex;
+    align-items: center;
+}
+
+.settings .settingRbtn span {
+    display: flex;
+    vertical-align: middle;
+}
+
+
+.groupedCalculation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    border-radius: 5px;
+    width: 350px;
+    margin: 20px;
+}
+

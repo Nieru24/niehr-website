@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Page Not Found</title>
   <script>
-    // Redirect to the correct route
+    // Redirect to the correct route using HashRouter
     var path = window.location.pathname.replace('/niehr-website', '');
-    var newUrl = window.location.origin + "/niehr-website/#" + path;
-    window.location.replace(newUrl);
+    if (!window.location.hash) {
+      var newUrl = window.location.origin + "/niehr-website/#" + path;
+      window.location.replace(newUrl);
+    }
   </script>
 </head>
 <body>
