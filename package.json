@@ -17,6 +17,7 @@
     "@emotion/styled": "^11.11.5",
     "@mantine/core": "^7.10.2",
     "@mantine/hooks": "^7.10.2",
+    "@remixicon/react": "^4.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.23.1"
