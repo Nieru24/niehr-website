@@ -25,6 +25,7 @@
 .divcontainer {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 .divcontainer .button {
@@ -78,15 +79,32 @@
 .logocontainer .logo {
     display: flex;
     height: 55px;
-    width: 55px;
+    width: 60px;
     background-color: hsl(349, 14%, 16%);
     border-radius: 50%;
     background-image: url('../../assets/RedGhost/RedGhost(Normal_Idle_1).svg');
     background-size: 50px;
     background-position: center;
     background-repeat: no-repeat;
+    transition: background-image 0.5s linear;
+}
+
+@keyframes swapImages {
+    0% {
+        background-image: url('../../assets/RedGhost/RedGhost(Normal_Idle_1).svg');
+    }
+    50% {
+        background-image: url('../../assets/RedGhost/RedGhost(Normal_Idle_2).svg');
+    }
+    100% {
+        background-image: url('../../assets/RedGhost/RedGhost(Normal_Idle_1).svg');
+    }
 }
 
 .logocontainer:hover {
     cursor: pointer;
+}
+
+.logocontainer:hover .logo {
+    animation: swapImages 1s infinite;
 }
