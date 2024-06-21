@@ -18,7 +18,7 @@
     margin-right: 20px;
     margin-bottom: 20px;
     padding: 20px;
-    overflow: hidden; /* Hide overflow within this component */
+    overflow: hidden;
 }
 
 
@@ -354,7 +354,7 @@
     border: 1px solid rgba(209, 213, 219, 0.3);
     border-radius: 5px;
     min-height: 525px;
-    width: 170px; /*170px*/
+    width: 170px;
     margin: 10px;
 }
 
@@ -385,15 +385,15 @@
     }
 
     .data{
-        width: auto; /* Adjust the width for smaller screens */
+        width: auto;
     }
 
     .data .div1,
     .data .div2,
     .data .div3{
-        width: 650px; /* Make divs take full width */
-        height: auto; /* Adjust the height for better fit */
-        margin: 10px 0; /* Adjust margin for spacing */
+        width: 650px;
+        height: auto;
+        margin: 10px 0;
     }
 
     .data .div1{
@@ -409,7 +409,7 @@
     }
 
     .data .div2{
-        padding: 10px; /* Adjust padding for smaller screens */
+        padding: 10px;
     }
 
     .data .div3{
@@ -458,12 +458,6 @@
         height: 70px;
         width: 220px;
         justify-content: center;
-
-        /* width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between; */
     }
 
     .table{
