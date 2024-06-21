@@ -1,7 +1,6 @@
 .header {
     backdrop-filter: blur(10px);
     background-color: transparent;
-    
     color: #fff;
     border: 2px solid hsla(350, 15%, 5%);
     height: auto;
@@ -32,7 +31,7 @@
     display: flex;
     border-radius: 5px;
     align-items: center;
-    margin-left: 30px;
+    margin-right: 10px;
 }
 
 .divcontainer .button .active {
@@ -108,3 +107,6 @@
 .logocontainer:hover .logo {
     animation: swapImages 1s infinite;
 }
+
+/* Make a responsive in 620px */
+/* */
