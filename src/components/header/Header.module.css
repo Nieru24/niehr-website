@@ -3,6 +3,7 @@
     background-color: transparent;
     color: #fff;
     border: 2px solid hsla(350, 15%, 5%);
+    background-image: linear-gradient(0deg, rgba(40,36,35,1) 0%, rgba(60,48,52,1) 40%, rgba(133,90,84,1) 100%);
     height: auto;
     text-align: center;
     text-transform: uppercase;
@@ -48,7 +49,6 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    backdrop-filter: blur(5px);
 }
 
 .divcontainer .button .active:not(:first-child) {

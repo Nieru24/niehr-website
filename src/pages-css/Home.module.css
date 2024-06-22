@@ -7,11 +7,7 @@
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     background-color: transparent;
-    background-image: linear-gradient(
-        120deg,
-        rgba(46, 35, 37,0.3),
-        rgba(159, 117, 107,0.6)
-    );
+    /* background-image: linear-gradient(222deg, rgba(40,36,35,1) 0%, rgba(60,48,52,1) 33%, rgba(133,90,84,1) 100%); */
     border-radius: 12px;
     border: 1px solid hsla(350, 15%, 5%);
     margin-left: 20px;
@@ -19,4 +15,24 @@
     margin-bottom: 20px;
     padding: 20px;
     overflow: hidden;
+    
+}
+
+.cardSection {
+    width: 100%;
+}
+
+.cardSectionTitle {
+    padding: 10px;
+    border-bottom: 3px solid hsl(332, 9%, 60%);
+}
+
+.cardSectionTitle h2 {
+    margin: 0;
+}
+
+.cardHolder {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }

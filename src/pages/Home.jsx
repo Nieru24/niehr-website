@@ -4,6 +4,7 @@ import classes from '../pages-css/Home.module.css'
 import WebsiteBackground from '../components/WebsiteBackground'
 import Footer from '../components/Footer'
 import Card from '../components/card/Card'
+import CardItems from '../components/card/CardItems'
 
 
 function home() {
@@ -14,11 +15,17 @@ function home() {
     <div className='main-content'>
       <div className={classes.home}>
         <h1>Home Page....Ako pa rin ang pinakamabait</h1>
-        <div className={classes.divContainer}>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
+        <div className={classes.cardSection}>
+          <div className={classes.cardSectionTitle}>
+            <h2>Projects</h2>
+          </div>
+          <div className={classes.cardHolder}>
+            {CardItems.map((item, index) => {
+              return (
+                <Card key={index} linkTo={item.linkTo} name={item.name} picLocation={item.picLocation} description={item.description}/>
+              )
+            })}
+          </div>
         </div>
       </div>
     </div>

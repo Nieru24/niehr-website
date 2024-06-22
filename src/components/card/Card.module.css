@@ -6,6 +6,18 @@
     overflow: hidden;
     position: relative;
     /* background-image: linear-gradient(222deg, rgba(40,36,35,1) 0%, rgba(60,48,52,1) 33%, rgba(133,90,84,1) 100%); */
+    margin: 10px;
+}
+
+.cardContainer button {
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: #9F756B;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .cardLink {
@@ -38,11 +50,43 @@
     background-color: #9F756B;
     bottom: 0;
     left: 0;
-    margin: 0;
     display: flex;
     align-items: center;
+    justify-content: flex-start;
+    transition: 0.5s;
+    flex-direction: column;
+}
+
+.cardName .row1 {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    transition: 0.3s;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+}
+
+.cardName .name {
+    width: 100%;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.cardName h3 {
+    font-size: 1rem;
+}
+
+.cardName button {
+    opacity: 0; /* Initially hide the button */
+    transition: opacity 0.3s ease-in-out; /* Add a transition for smooth animation */
+}
+
+.cardName p {
+    opacity: 0; /* Initially hide the description */
+    font-size: 1rem;
+    transition: opacity 0.3s ease-in-out; /* Add a transition for smooth animation */
+    text-align: justify;
 }
 
 .card:hover {
@@ -53,6 +97,31 @@
     transform: scale(1.1);
 }
 
-.card:hover h3 {
+.cardContainer:hover .cardName {
     background-color: hsla(12, 21%, 52%, 0.8);
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cardContainer:hover h3 {
+    border-bottom: 2px solid black;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.cardContainer:hover h3{
+    margin-bottom: 0;
+}
+
+.cardContainer:hover .cardName p {
+    opacity: 1; /* Show the description on hover */
+}
+
+.cardContainer:hover .cardName button {
+    opacity: 1; /* Show the button on hover */
+}
+
+.cardContainer button:hover {
+    background-color: #80594D;
 }
