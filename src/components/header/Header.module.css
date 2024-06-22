@@ -10,6 +10,8 @@
     border-radius: 5px;
     font-family: Roboto, sans-serif;
     margin: 10px;
+    position: relative;
+    z-index: 5;
 }
 
 .a {
@@ -26,6 +28,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
 .divcontainer .button {
@@ -109,4 +112,42 @@
 }
 
 /* Make a responsive in 620px */
-/* */
+@media (max-width: 620px) {
+    .divcontainer .button {
+      display: none;
+      position: absolute;
+      top: 55px; /* Adjust this value based on your header height */
+      right: 0px;   
+      background-color: rgba(46, 35, 37, 1);
+      border-radius: 5px;
+      padding: 10px;
+    }
+  
+    .divcontainer .button.show {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .divcontainer .button .active {
+      margin: 5px 0;
+      border-left: none !important;
+    }
+  
+    .divcontainer .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 18px; /* Adjust the height as needed */
+        cursor: pointer;
+        margin-right: 15px;
+        align-items: center;
+        align-content: center;
+      }
+      
+      .divcontainer .menu-toggle span {
+        display: block;
+        width: 25px;
+        height: 2px;
+        background-color: #fff;
+      }
+  }

@@ -78,14 +78,14 @@
 }
 
 .cardName button {
-    opacity: 0; /* Initially hide the button */
-    transition: opacity 0.3s ease-in-out; /* Add a transition for smooth animation */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .cardName p {
-    opacity: 0; /* Initially hide the description */
+    opacity: 0;
     font-size: 1rem;
-    transition: opacity 0.3s ease-in-out; /* Add a transition for smooth animation */
+    transition: opacity 0.3s ease-in-out;
     text-align: justify;
 }
 
@@ -115,13 +115,19 @@
 }
 
 .cardContainer:hover .cardName p {
-    opacity: 1; /* Show the description on hover */
+    opacity: 1;
 }
 
 .cardContainer:hover .cardName button {
-    opacity: 1; /* Show the button on hover */
+    opacity: 1;
 }
 
 .cardContainer button:hover {
     background-color: #80594D;
+}
+
+@media (max-width: 520px) {
+    .cardContainer {
+        width: 300px;
+    }
 }

@@ -14,7 +14,7 @@ function home() {
     <Header/>
     <div className='main-content'>
       <div className={classes.home}>
-        <h1>Home Page....Ako pa rin ang pinakamabait</h1>
+        <h1>Home Page</h1>
         <div className={classes.cardSection}>
           <div className={classes.cardSectionTitle}>
             <h2>Projects</h2>
