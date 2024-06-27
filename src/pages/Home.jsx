@@ -1,7 +1,6 @@
 import React from 'react'
 import Header from '../components/header/Header'
 import classes from '../pages-css/Home.module.css'
-import WebsiteBackground from '../components/WebsiteBackground'
 import Footer from '../components/Footer'
 import Card from '../components/card/Card'
 import CardItems from '../components/card/CardItems'
@@ -10,7 +9,6 @@ import CardItems from '../components/card/CardItems'
 function home() {
   return (
     <>
-    <WebsiteBackground/>
     <Header/>
     <div className='main-content'>
       <div className={classes.home}>

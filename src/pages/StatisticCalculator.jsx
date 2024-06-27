@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import classes from '../pages-css/StatisticCalculator.module.css'
 import Header from '../components/header/Header'
 import Footer from '../components/Footer'
-import WebsiteBackground from '../components/WebsiteBackground'
 import { range } from '@mantine/hooks';
 
 
@@ -426,7 +425,6 @@ function StatisticCalculator() {
 
   return (
     <>
-      <WebsiteBackground/>
       <Header/>
       <div className='main-content'>
         <div className={classes.calculator}>

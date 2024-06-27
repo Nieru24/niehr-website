@@ -6,6 +6,10 @@ body, html {
   font-family: Roboto, sans-serif;
   overflow-x: hidden;
   overflow-y: auto;
+  background-image: url('./assets/WebsiteBackground.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .main-content {
@@ -18,7 +22,7 @@ body, html {
   overflow: auto;
 } */
 
-.website-background {
+/* .website-background {
   position: fixed;
   top: 0;
   left: 0;
@@ -29,4 +33,4 @@ body, html {
   background-position: center;
   background-repeat: no-repeat;
   z-index: -1;
-}
+} */

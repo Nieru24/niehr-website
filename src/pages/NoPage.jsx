@@ -1,5 +1,4 @@
 import React from 'react';
-import WebsiteBackground from '../components/WebsiteBackground';
 import classes from '../pages-css/NoPage.module.css';
 import { useNavigate } from 'react-router-dom';
 
@@ -22,7 +21,6 @@ function NoPage() {
 
   return (
     <>
-      <WebsiteBackground/>
       <div className={classes.div}>
         <button className={classes.button} onClick={() => navigate(-1)}>
           <svg height="16" width="16" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1024 1024">
